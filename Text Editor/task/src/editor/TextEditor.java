@@ -18,14 +18,14 @@ public class TextEditor extends JFrame {
 //FRAME CREATING
         super("Text Editor");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(900, 600);
         setResizable(false);
         //setAlwaysOnTop(true);
         setLocationRelativeTo(null);
         //setLayout(new FlowLayout());
 
 //TEXT AREA CREATING
-        JTextArea textArea = new JTextArea(30, 65);
+        JTextArea textArea = new JTextArea(30, 85);
         textArea.setWrapStyleWord(true);
         textArea.setLineWrap(true);
         textArea.setName("TextArea");
@@ -54,7 +54,7 @@ public class TextEditor extends JFrame {
         upperPanel.add(fileChooser);
 
 //BUTTONS CREATING
-        JButton save = new JButton(new ImageIcon("C:\\Users\\Nick\\IdeaProjects\\experimrntal\\save.png"));
+        JButton save = new JButton("Save");
         save.setName("SaveButton");
         save.addActionListener(e -> {
             fileChooser.setVisible(true);
@@ -74,7 +74,7 @@ public class TextEditor extends JFrame {
         });
 
 
-        JButton open = new JButton(new ImageIcon("C:\\Users\\Nick\\IdeaProjects\\experimrntal\\open.png"));
+        JButton open = new JButton("Open");
         open.setName("OpenButton");
         open.addActionListener(e -> {
             fileChooser.setVisible(true);
@@ -94,7 +94,7 @@ public class TextEditor extends JFrame {
             }
         });
 
-        JButton search = new JButton(new ImageIcon("C:\\Users\\Nick\\IdeaProjects\\experimrntal\\search.png"));
+        JButton search = new JButton("Search");
         search.setName("StartSearchButton");
 
         search.addActionListener(e -> {
@@ -121,7 +121,7 @@ public class TextEditor extends JFrame {
             textArea.grabFocus();
         });
 
-        JButton next = new JButton(new ImageIcon("C:\\Users\\Nick\\IdeaProjects\\experimrntal\\next.png"));
+        JButton next = new JButton("Next");
         next.setName("NextMatchButton");
         next.addActionListener(e -> {
 
@@ -149,7 +149,7 @@ public class TextEditor extends JFrame {
             textArea.grabFocus();
         });
 
-        JButton previous = new JButton(new ImageIcon("C:\\Users\\Nick\\IdeaProjects\\experimrntal\\previous.png"));
+        JButton previous = new JButton("Previous");
         previous.setName("PreviousMatchButton");
         previous.addActionListener(e -> {
 
